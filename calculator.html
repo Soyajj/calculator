@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>Calculator</title>
+<style>
+*{
+padding:4px;
+margin:3px;
+}
+
+button{
+background-color:#505050;
+height:40px;
+width:40px; 
+border:none; 
+border-radius:20px;
+font-family:arial;
+font-size:18px;
+color:white;
+}
+
+button:hover{
+color:black;
+background-color:white;
+transition:0.2s;
+}
+
+h2{
+font-family:Comic Sans MS; 
+color:white;
+}
+
+</style>
+</head>
+
+<body>
+<center>
+<table border="2" style="border-radius:15px; background-color:#0E0E0E ; border-color:black;">
+<td>
+<center><h2>Calculator</h2></center>
+<p><input type="text" id="monitor" style="height:40px; width:190px; border:2px solid #323232; border-radius:9px; font-size:19px;"></p>
+<p>
+<button onclick="one()">1</button>
+<button onclick="two()" >2</button>
+<button onclick="three()">3</button>
+<button onclick="add()" style="background-color:#EA6A21;">+</button>
+</p>
+
+<p>
+<button onclick="four()">4</button>
+<button onclick="five()">5</button>
+<button onclick="six()">6</button>
+<button onclick="sub()" style="background-color:#EA6A21;">-</button>
+</p>
+
+<p>
+<button onclick="seven()">7</button>
+<button onclick="eight()">8</button>
+<button onclick="nine()">9</button>
+<button onclick="mul()" style="background-color:#EA6A21;">&#215</button>
+</p>
+
+<p>
+<button onclick="decimal()">.</button>
+<button onclick="zero()">0</button>
+<button onclick="result()" style="background-color:#EA6A21;">=</button>
+<button onclick="div()" style="background-color:#EA6A21;">&#247</button>
+</p>
+</td>
+</table>
+</center>
+
+<script>
+var a,b,w=0,x=0,y=0,z=0;
+
+function one(){
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"1";
+}
+
+function two(){
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"2";
+}
+
+function three(){
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"3";
+}
+
+function four(){
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"4";
+}
+
+function five(){
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"5";
+}
+
+function six(){
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"6";
+}
+
+function seven(){
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"7";
+}
+
+function eight(){
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"8";
+}
+
+function nine(){
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"9";
+}
+
+function zero(){
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"0";
+}
+
+function decimal(){
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+".";
+}
+
+function mul(){
+w=1;
+b=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value="";
+x=0;y=0;z=0;
+}
+
+function sub(){
+x=1;
+b=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value="";
+w=0;y=0;z=0;
+}
+
+function add(){
+y=1;
+b=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value="";
+w=0;x=0;z=0;
+}
+
+function div(){
+z=1;
+b=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value="";
+w=0;x=0;y=0;
+}
+
+function result(){
+if(w==1){
+a=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value=b*a;
+}
+if(x==1){
+a=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value=b-a;
+}
+if(y==1){
+a=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value=b+a;
+}
+if(z==1){
+a=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value=b/a;
+}
+}
+
+
+</script>
+</body>
+</html>
